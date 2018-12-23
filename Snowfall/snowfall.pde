@@ -1,11 +1,11 @@
 import ddf.minim.*;
 import ddf.minim.effects.*;
-import gifAnimation.*;
+//import gifAnimation.*;
 
 Minim minim;
 AudioPlayer rock;
 
-Gif santaGif;
+//Gif santaGif;
 
 ArrayList<snowflake> snow = new ArrayList<snowflake>();
 
@@ -17,7 +17,7 @@ PImage house;
 PImage presentPic;
 PImage s;
 
-santaMove movingSanta;
+//santaMove movingSanta;
 
 int build = 0;
 
@@ -32,10 +32,11 @@ void setup() {
   minim = new Minim(this);
   rock = minim.loadFile("rock.mp3", 2048);
   
+  /*
   santaGif = new Gif(this, "santa.gif");
   s = loadImage("santa.gif");
-  
   movingSanta = new santaMove();
+  */
 }
 
 void draw() {
@@ -43,7 +44,7 @@ void draw() {
   System.gc();
   background(0);
   
-  movingSanta.santaTR();
+  //movingSanta.santaTR();
   
   tick++;
   
@@ -53,7 +54,7 @@ void draw() {
   if(tick % floor(random(1, 5)) == 0) { 
   snow.add(new snowflake(random(0, width), //X
                           -20, //Y
-                          (int)random(1, 10) + (int)random(1, 10), //Size
+                          (int)random(1, 30), //Size
                           flake, //Picture
                           (int)random(1, 500)) ); //Present chance
   }

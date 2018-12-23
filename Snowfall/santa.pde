@@ -1,3 +1,4 @@
+/*
 class santaMove {
   PVector sPos, sVel;
   
@@ -28,3 +29,4 @@ class santaMove {
     popMatrix();
   }
 }
+*/

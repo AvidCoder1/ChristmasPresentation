@@ -23,7 +23,7 @@ class snowflake {
      if(present != 250) {
        this.p = false;
        this.size = size;
-       acc.add(0, (aCoef * (size * 10)));
+       acc.add(0, map(size, 1, 30, 0.0000001, 0.0001));
        this.flake = flake1;
        vel = new PVector(0, 2);
      }
@@ -49,17 +49,17 @@ class snowflake {
   void update() {
     if(stop1 == false) {
       this.wind.add(random(-0.25, 0.25), random(-0.25, 0.25));
-      if(this.wind.x > 2) {
-        this.wind.x = 2; 
+      if(this.wind.x > size/10) {
+        this.wind.x = size/10; 
       }
-      else if(this.wind.x < -2) {
-        this.wind.x = -2;
+      else if(this.wind.x < -size/10) {
+        this.wind.x = -size/10;
       }
-      if(this.wind.y > 2) {
-        this.wind.y = 2; 
+      if(this.wind.y > size/10) {
+        this.wind.y = size/10; 
       }
-      else if(this.wind.y < -4.25) {
-        this.wind.y = -4.25; 
+      else if(this.wind.y < -size/4.7058823) {
+        this.wind.y = -size/4.7058823; 
       }
       
       this.pos.add(this.vel);
